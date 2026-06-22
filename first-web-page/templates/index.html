@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myfirst webpage</title>
+</head>
+<body>
+    <div>
+    <h1>Welcome To My Very First Page</h1>
+    </div>
+       <img src="image/second.jpeg" alt="logo">
+<div>
+    {{range .}}
+    <h1>FullName: {{.FullName}}</h1>
+     {{if .Phone}}
+    <p>Phone: {{ .Phone}}</p>
+    {{else}}
+    <p>Please Provide Phone Number</p>
+    {{end}}
+    {{if .Age}}
+    <p>Age: {{.Age}}</p>
+    {{else}}
+    <p>Please Provide your age</p>
+    {{end}}
+    {{if .Address.State}}
+    <p>State: {{.Address.State}}</p>
+    {{else}}
+    <p>please Provide your State</p>
+    {{end}}
+    {{if .Address.City}}
+    <p>City: {{.Address.City}}</p>
+    {{else}}
+    <p>please Where is your City</p>
+    {{end}}
+    {{if .Address.LGA}}
+    <p>LGA: {{.Address.LGA}}</p>
+    {{else}}
+    <p>where is your Local Government Area?</p>
+    {{end}}
+    {{if .Address.Street}}
+    <p>Street: {{.Address.Street}}</p>
+    {{else}}
+    <p>What is the Name of your Street?</p>
+    {{end}}
+    <hr>
+    {{end}}
+</div>
+</body>
+</html>
