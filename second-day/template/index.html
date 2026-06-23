@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>schoolinfo</title>
+</head>
+<body>
+    <div>
+        
+    <h1>Welcome To Our Portal: {{.SchoolName}}</h1>
+    <h4>Reg: {{.RegNumber}}</h4>
+    </div>
+
+    <div>
+        {{range .Students}}
+        {{if .Fullname}}
+        <h1>Student: {{.Fullname}}</h1>
+        {{else}}
+        <p>Name Not Provided</p>
+        {{end}}
+
+        {{if .Age}}
+        <p>Age: {{.Age}}</p>
+        {{else}}
+        <p>Age: Not Registerd</p>
+        {{end}}
+
+        {{if .Height}}
+        <p>Height: {{.Height}}</p>
+        {{else}}
+        <p>Height: Not Registerd</p>
+        {{end}}
+
+        {{if .Email}}
+        <p>Email: {{.Email}}</p>
+        {{else}}
+        <p>Email: not registerd</p>
+        {{end}}
+
+        {{if .PhoneNumber}}
+        <p>Phone Number: {{.PhoneNumber}}</p>
+        {{else}}
+        <p>Phone Number: Not Registerd</p>
+        {{end}}
+
+        {{if .Language}}
+        <p>Language: {{.Language}}</p>
+        {{else}} 
+        <p>Language: Not Registerd</p>  
+        {{end}}
+
+        {{if .Id}}
+        <p>Student ID: {{.Id}}</p>
+        {{else}}
+        <p>Student ID: Not Registerd</p> 
+        {{end}}
+
+        {{if .Address.Country}}
+        <p>Country : {{.Address.Country}}</p>
+        {{else}}
+        <p>Country: Not Registerd</p>
+        {{end}}
+
+        {{if .Address.State}}
+        <p>Address: {{.Address.State}}</p>
+        {{else}}
+        <p>State: Not Registerd</p>
+        {{end}}
+
+        {{if .Address.City}}
+        <p>City: {{.Address.City}}</p>
+        {{else}}
+        <p>City Address: Not Registerd</p>
+        {{end}}
+
+        {{if .Address.LGA}}
+        <p>LGA: {{.Address.LGA}}</p>
+        {{else}}
+        <p>Local Government Area: not Registerd</p>
+        {{end}}
+
+        {{if .Address.Street}}
+        <p>Street: {{.Address.Street}}</p>
+        {{else}}
+        <p>Street Details: not Registerd</p>
+        {{end}}
+        <hr>
+    </div>
+        {{end}}
+    </div>
+
+    
+</body>
+</html>
