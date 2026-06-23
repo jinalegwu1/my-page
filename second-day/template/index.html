@@ -11,9 +11,8 @@
     <h1>Welcome To Our Portal: {{.SchoolName}}</h1>
     <h4>Reg: {{.RegNumber}}</h4>
     </div>
-
-    <div>
         {{range .Students}}
+        <div>
         {{if .Fullname}}
         <h1>Student: {{.Fullname}}</h1>
         {{else}}
@@ -56,36 +55,40 @@
         <p>Student ID: Not Registerd</p> 
         {{end}}
 
-        {{if .Address.Country}}
-        <p>Country : {{.Address.Country}}</p>
+        {{with .Address}}
+
+            {{if .Country}}
+        <p>Country : {{.Country}}</p>
         {{else}}
         <p>Country: Not Registerd</p>
         {{end}}
 
-        {{if .Address.State}}
-        <p>Address: {{.Address.State}}</p>
+        {{if .State}}
+        <p>Stat: {{.State}}</p>
         {{else}}
         <p>State: Not Registerd</p>
         {{end}}
 
-        {{if .Address.City}}
-        <p>City: {{.Address.City}}</p>
+
+        {{if .City}}
+        <p>City: {{.City}}</p>
         {{else}}
         <p>City Address: Not Registerd</p>
         {{end}}
 
-        {{if .Address.LGA}}
-        <p>LGA: {{.Address.LGA}}</p>
+        {{if .LGA}}
+        <p>LGA: {{.LGA}}</p>
         {{else}}
         <p>Local Government Area: not Registerd</p>
         {{end}}
 
-        {{if .Address.Street}}
-        <p>Street: {{.Address.Street}}</p>
+        {{if .Street}}
+        <p>Street: {{.Street}}</p>
         {{else}}
         <p>Street Details: not Registerd</p>
         {{end}}
         <hr>
+        {{end}}
     </div>
         {{end}}
     </div>
