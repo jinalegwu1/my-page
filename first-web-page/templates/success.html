@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body { font-family: Arial; text-align: center; padding: 30px; }
+        textarea { width: 500px; height: 120px;}
+        button { padding: 10px 20px; font-size: 18;}
+        pre { text-align: left; background-color: aquamarine; padding: 15px; display: inline-block;}
+        .error { color: red;}
+    </style>
+    <title></title>
+</head>
+<body>
+    <div>
+    <h1>RCCG YOUNG AND ADULT ZONE BP2</h1>
+    </div>
+       <img src="image/rccg.png" alt="logo">
+       <h3>Registration Done Successful</h3>
+<div>
+    {{range .}}
+    <p>FullName: <h4>{{.FullName}}</h4></p>
+     {{if .Phone}}
+    <p>Phone: {{.Phone}}</p>
+    {{else}}
+    <p>Not Registered</p>
+    {{end}}
+
+    {{if .Age}}
+    <p>Age: {{.Age}}</p>
+    {{else}}
+    <p>Not Registered</p>
+    {{end}}
+
+    {{with .Address}}
+    {{if .State}}
+    <p>State: {{.State}}</p>
+    {{else}}
+    <p>Not Registered</p>
+    {{end}}
+
+    {{if .City}}
+    <p>City: {{.City}}</p>
+    {{else}}
+    <p>Not Registered</p>
+    {{end}}
+
+    {{if .LGA}}
+    <p>LGA: {{.LGA}}</p>
+    {{else}}
+    <p>Not Registered</p>
+    {{end}}
+
+    {{if .Street}}
+    <p>Street: {{.Street}}</p>
+    {{else}}
+    <p>Not Registered</p>
+    {{end}}
+
+    <hr>
+    {{end}}
+    {{end}}
+</div>
+</body>
+</html>

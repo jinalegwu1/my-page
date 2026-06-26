@@ -1,50 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial; text-align: center; padding: 30px; }
+        textarea { width: 500px; height: 120px;}
+        button { padding: 10px 20px; font-size: 18;}
+        pre { text-align: left; background-color: aquamarine; padding: 15px; display: inline-block;}
+        .error { color: red;}
+    </style>
     <title>myfirst webpage</title>
 </head>
 <body>
     <div>
-    <h1>Welcome To My Very First Page</h1>
+        <img src="image/rccg2.jpeg" alt="">
+    <h1>RCCG YOUNG AND ADULT ZONE BP2</h1>
     </div>
-       <img src="image/second.jpeg" alt="logo">
 <div>
-    {{range .}}
-    <h1>FullName: {{.FullName}}</h1>
-     {{if .Phone}}
-    <p>Phone: {{ .Phone}}</p>
-    {{else}}
-    <p>Please Provide Phone Number</p>
-    {{end}}
-    {{if .Age}}
-    <p>Age: {{.Age}}</p>
-    {{else}}
-    <p>Please Provide your age</p>
-    {{end}}
-    {{if .Address.State}}
-    <p>State: {{.Address.State}}</p>
-    {{else}}
-    <p>please Provide your State</p>
-    {{end}}
-    {{if .Address.City}}
-    <p>City: {{.Address.City}}</p>
-    {{else}}
-    <p>please Where is your City</p>
-    {{end}}
-    {{if .Address.LGA}}
-    <p>LGA: {{.Address.LGA}}</p>
-    {{else}}
-    <p>where is your Local Government Area?</p>
-    {{end}}
-    {{if .Address.Street}}
-    <p>Street: {{.Address.Street}}</p>
-    {{else}}
-    <p>What is the Name of your Street?</p>
-    {{end}}
-    <hr>
-    {{end}}
+    <form method ="post">
+        <input type="text" name="fullname" placeholder="Enter Your FullName:"> <br><br>
+
+        <input type="phone" name="phone" placeholder="Please Enter Your Phone No. :"> <br><br>
+        <input type="number" name="age" placeholder="Please Enter Your Age:"> <br></br>
+        <input type="text" name="state" placeholder="Please Enter Your State:"> <br><br>
+        <input type="text" name="city" placeholder="City Name:"> <br><br>
+        <input type="text" name="lga" placeholder="L.G.A. Name:"> <br><br>
+        <input type="text" name="street" placeholder="Street Number & Name:"> <br><br>
+        <button type="submit">Submit</button>
+    </form>
 </div>
 </body>
 </html>

@@ -8,7 +8,7 @@ import (
 func main() {
 
 	http.HandleFunc("/", HomeHandler)
-	http.HandleFunc("/student", StudentLoadHandler)
+	//http.HandleFunc("/student", StudentLoadHandler)
 	fmt.Println("Server: Running Successfully!")
 	http.ListenAndServe(":8080", nil)
 }
