@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Conversion</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 500px; margin: 0 auto; color: blue; text-align: center; padding: 30px;}
+        /* Fixed textarea rule (not used in body, but kept for your reference) */
+        textarea { width: 120px; height: 300px; color: purple;}
+        /* Replaced invalid 'auto' padding */
+        button { padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h1>WELCOME TO THE WORLD OF CORRECTION</h1>
+    <h4>THINK OF WHAT WE HAVE FOR YOU TODAY</h4>
+    <p>TODAY WE ARE DEALING WITH WORD CONVERSIONS:</p>
+    
+    <form method="post">
+        <!-- Fixed typo and linked label to input -->
+        <label for="word-search">PLEASE ENTER YOUR WORDS OF CHOICE TO BEGIN THE CONVERSION!: </label><br><br>
+        <!-- Changed placeholder attribute and added ID -->
+        <input type="search" id="word-search" name="hextodec" placeholder="Enter the Words Here:"> <br><br>
+
+        <!-- Fixed select dropdown options and added a submit button -->
+        <label for="hex">Choose format:</label>
+        <select name="conversion_type" id="hex">
+            <option value="hex">Hexadecimal</option>
+            <option value="dec">Decimal</option>
+        </select>
+        <br><br>
+        <button type="submit">Convert</button>
+    </form>
+</body>
+</html>
