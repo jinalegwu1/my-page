@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascii Web Project</title>
+</head>
+<body>
+    <form method="post">
+    <h1>Welcome To Ascii Web.</h1>
+
+    <textarea 
+    name="text" 
+    rows="8"
+    cols="50"
+    placeholder="Enter Your Text Here..."></textarea>
+    <br><br>
+
+    <select name="banner">
+        <option value="standard">Standard</option>
+        <option value="shadow">Shadow</option>
+        <option value="thinkertoy">Thinkertoy</option>
+    </select>
+    <br><br>
+
+    <button type="submit">Generate</button>
+    </form>
+    <pre>{{.Result}}</pre>
+</body>
+</html>
